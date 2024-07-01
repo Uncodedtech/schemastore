@@ -1,4 +1,5 @@
 {
+  "$schema": "./schema-validation.schema.json",
   "ajvNotStrictMode": [
     "anywork-ac-1.0.json",
     "anywork-ac-1.1.json",
@@ -128,9 +129,11 @@
     "minecraft-recipe.json",
     "minecraft-template-pool.json",
     "mtad.json",
+    "mprocs-0.6.4.json",
     "nest-cli.json",
     "netlify.json",
     "nightwatch.json",
+    "ninjs-1.4.json",
     "ninjs-2.0.json",
     "now.json",
     "npmpackagejsonlintrc.json",
@@ -173,7 +176,6 @@
     "remarkrc.json",
     "resjson.json",
     "sarif-1.0.0.json",
-    "semgrep.json",
     "size-limit.json",
     "solidaritySchema.json",
     "sprite.json",
@@ -343,6 +345,7 @@
     "theme-v1.json",
     "renovate.json",
     "markdownlint.json",
+    "semgrep.json",
     "taskfile.json",
     "neoload.json",
     "xunit-2.2.json",
@@ -378,6 +381,36 @@
         "abcDoMaterialIDsExist",
         "abcIsAcyclic",
         "abcIsValidColor",
+        "abcHasNonOverlappingTimeDependentValues",
+        "abcHasUninterruptedTimeDependentValues"
+      ]
+    },
+    "abc-supply-plan-2.0.0.json": {
+      "unknownFormat": ["abc-draft-js_RawDraftContentState"],
+      "unknownKeywords": [
+        "abcIsFirstDayOfMonth",
+        "abcIsLastDayOfMonth",
+        "abcIsAfter0001-01-01",
+        "abcIsBefore9999-12-31",
+        "abcDoMaterialIDsExist",
+        "abcIsAcyclic",
+        "abcIsValidColor",
+        "abcHasNonOverlappingTimeDependentValues",
+        "abcHasUninterruptedTimeDependentValues"
+      ]
+    },
+    "abc-supply-plan-3.0.0.json": {
+      "unknownFormat": ["abc-draft-js_RawDraftContentState"],
+      "unknownKeywords": [
+        "abcIsFirstDayOfMonth",
+        "abcIsLastDayOfMonth",
+        "abcIsAfter0001-01-01",
+        "abcIsBefore9999-12-31",
+        "abcDoMaterialIDsExist",
+        "abcIsAcyclic",
+        "abcAreAllocationMethodsHomogeneous",
+        "abcIsValidColor",
+        "abcNoDuplicateValuesForOrderingProperty",
         "abcHasNonOverlappingTimeDependentValues",
         "abcHasUninterruptedTimeDependentValues"
       ]
@@ -452,7 +485,7 @@
     "cargo.json": {
       "externalSchema": ["base.json"],
       "unknownFormat": ["uint32", "semver", "semver-requirement"],
-      "unknownKeywords": ["x-taplo", "x-taplo-info", "x-for"]
+      "unknownKeywords": ["x-taplo", "x-taplo-info"]
     },
     "cheatsheets.json": {
       "externalSchema": ["base.json"]
@@ -473,7 +506,8 @@
       "unknownKeywords": ["fileMatch"]
     },
     "clangd.json": {
-      "externalSchema": ["base.json"]
+      "externalSchema": ["base.json"],
+      "unknownKeywords": ["enumDescriptions"]
     },
     "clasp.json": {
       "externalSchema": ["base-04.json"]
@@ -665,7 +699,11 @@
       "externalSchema": ["jsbeautifyrc.json"]
     },
     "jsconfig.json": {
-      "unknownKeywords": ["markdownDescription", "markdownEnumDescriptions"]
+      "unknownKeywords": [
+        "markdownDescription",
+        "markdownEnumDescriptions",
+        "allowTrailingCommas"
+      ]
     },
     "launchsettings.json": {
       "unknownKeywords": ["allowTrailingCommas"]
@@ -734,6 +772,9 @@
     },
     "minecraft-texture-mcmeta.json": {
       "externalSchema": ["partial-fusion-texture-metadata.json"]
+    },
+    "ninjs-1.4.json": {
+      "unknownKeywords": ["description_old"]
     },
     "ninjs-2.0.json": {
       "externalSchema": ["geojson.json"],
@@ -1012,6 +1053,5 @@
         "local-file"
       ]
     }
-  },
-  "$schema": "./schema-validation.schema.json"
+  }
 }
